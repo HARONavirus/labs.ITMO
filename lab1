@@ -1,0 +1,28 @@
+public class Main {
+    public static void main(String[] args) {
+        long[] d = new long[12];
+        double[] x = new double[16];
+        double[][] c = new double [11][16];
+        int index = 0;
+        for (int i = 23; i > 2; i--) {
+            if (i % 2 != 0) {
+                d[index] = i;
+                System.out.println(d[index] + " ");
+                index++;
+            }
+        }
+        for (int p = 0; p < x.length; p++) {
+            x[p]=((double)(Math.random()*7)-3);
+            System.out.println(x[p]);
+        }
+        for (int i = 0; i<11; i++)
+            for (int j = 0; j<16; j++){
+                if (d[i] ==23)
+                 c[i][j] = (Math.log(Math.acos(Math.cos(x[j]))));
+                else if (d[i] == 5 || d[i] == 7 || d[i] == 9 || d[i] == 11 || d[i] == 13)
+                 c[i][j] = (Math.exp(Math.cos(x[j])*(2+Math.tan(x[j]))));
+                else c[i][j] = (Math.log(Math.sqrt(Math.pow(Math.sin(Math.tan(Math.pow(Math.PI * x[j],3))),2)))); 
+            System.out.println(c[i][j]);
+            }
+    }
+}
